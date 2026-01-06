@@ -14,7 +14,7 @@ class Cita(BaseModel):
     hora: str
 
 # --- ENDPOINTS ---
-
+ 
 @app.post("/agendar/")
 def agendar_cita(cita: Cita):
     """
