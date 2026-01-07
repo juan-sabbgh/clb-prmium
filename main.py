@@ -12,6 +12,6 @@ class Cita(BaseModel):
     mensaje: str   # <-- El error dice que esto faltaba
 
 @app.post("/agendar/")
-def agendar_cita(cita: Cita):
+async def agendar_cita(cita: Cita):
     fake_database.append(cita.dict())
     return {"status": "ok", "recibido": cita}
