@@ -12,6 +12,7 @@ fake_database = []
 class Cita(BaseModel):
     username: str
     hora: str
+    mensaje: str
 
 # --- ENDPOINTS ---
  
@@ -22,6 +23,8 @@ def agendar_cita(cita: Cita):
     """
     # Simulamos el guardado añadiendo a la lista
     fake_database.append(cita.dict())
+
+    print(cita.dict())
     
     print(f"--> SIMULACIÓN DB: Se guardó horario de contacto para {cita.username} a las {cita.hora}")
     
